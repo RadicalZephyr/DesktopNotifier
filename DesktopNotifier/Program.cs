@@ -45,12 +45,12 @@ namespace DesktopNotifier
         // Required
         [Option('m', "message", Required = true, DefaultValue = "Hello, World", HelpText = "The message to display.")]
         public string message { get; set; }
-        
+
         // Optional
-        [Option('t', "title", Required = true, DefaultValue = "Terminal", HelpText = "The title text to display.")]
+        [Option('t', "title", Required = false, DefaultValue = "Terminal", HelpText = "The title text to display.")]
         public string title { get; set; }
 
-        [Option('i', "icon", Required = false, HelpText = "The path to a .ico file to display.")]
+        [Option('i', "icon", Required = false, HelpText = "(Default: This program's app icon) The path to a .ico file to display.")]
         public string iconPath { get; set; }
 
         [Option('s', "showTime", Required = false, DefaultValue = 10000, HelpText = "The length of time to show notification for in milliseconds.")]
